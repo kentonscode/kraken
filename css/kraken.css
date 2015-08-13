@@ -2,6 +2,7 @@
 
 .jumbotron {
   background-color: #417ABB;
+  margin: 0;
 
 }
 
@@ -14,17 +15,31 @@ p {
   color: white;
 }
 
-/* CSS relating to URL input form */
+/* CSS relating to URL input field & button */
+
+.form-control {
+  margin-top: 20px;
+
+}
+
 .scanner-button {
-  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+
 }
 
 .btn-primary {
   background-color: #5cb85c;
   color: white;
-
-.btn-primary:hover {
-background-color: #417ABB;
+  border-radius: 25px;
 }
 
+.btn-primary:hover {
+  background-color: #417ABB;
+
+}
+
+/* color of div where URL scanner field is located */
+.scanner {
+  background-color:#343434;
 }
