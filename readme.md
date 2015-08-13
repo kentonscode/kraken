@@ -1,0 +1,1 @@
+Kraken is a Wordpress vulnerability scanner for Wordpress users who want an easy solution for keeping their site secure. 
