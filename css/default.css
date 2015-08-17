@@ -1,0 +1,64 @@
+/* font */
+
+body,
+h1,
+h3 {
+  font-family: 'Philosopher', sans-serif;
+}
+
+/* CSS relating to jumbotron */
+
+.jumbotron {
+  background-color: #417ABB;
+  margin: 0;
+
+}
+
+.jumbotron h1 {
+  text-align: center;
+}
+
+.jumbotron h1,
+p {
+  color: white;
+}
+
+/* CSS relating to URL input field & button */
+
+/*.form-control {*/
+  /*margin-top: 20px;*/
+
+/*}*/
+
+.scanner-button {
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+}
+
+.btn-primary {
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 25px;
+}
+
+.btn-primary:hover {
+  background-color: #417ABB;
+
+}
+
+/* color of div where URL scanner field is located */
+.scanner {
+  background-color:#343434;
+}
+
+/* why use Kraken */
+
+.why {
+  color: white;
+  background-color: #417ABB;
+}
+
+.why h1 {
+ font-size: 45px;
+}
