@@ -37,7 +37,8 @@ p {
 }
 
 .btn-primary {
-  background-color: #5cb85c;
+  /*background-color: #5cb85c;*/
+  background-color: #5B9A3F;
   color: white;
   border-radius: 25px;
 }
