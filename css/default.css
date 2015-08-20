@@ -15,12 +15,18 @@ h3 {
   background-color:#343434;
   margin: 0;
 }
+  /* nav hover color */
+
+li:hover > a {
+  color: white;
+  background-color: #5B9A3F !important;
+}
+
 /* CSS relating to jumbotron  */
 
 .jumbotron {
   background-color: #417ABB;
   margin: 0;
-
 }
 
 .jumbotron h1 {
@@ -75,7 +81,16 @@ p {
 
 /* membership price boxes */
 
-.member-plans {margin-top: 19px;}
+.member-plans {
+  margin-top: 19px;
+}
+
+/* membership container row jumbotron and row member-plans */
+
+.power {
+  background-color: #417ABB;
+  margin: 0;
+}
 
 /* color of bottom div membership page */
 
