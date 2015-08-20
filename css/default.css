@@ -6,7 +6,16 @@ h3 {
   font-family: 'Philosopher', sans-serif;
 }
 
-/* CSS relating to jumbotron */
+/* navigation */
+
+.nav-tabs {
+  border-bottom: none;
+}
+.navbar {
+  background-color:#343434;
+  margin: 0;
+}
+/* CSS relating to jumbotron  */
 
 .jumbotron {
   background-color: #417ABB;
@@ -42,7 +51,8 @@ p {
 
 }
 
-/* color of div where URL scanner field is located */
+/* color of div where homepage button is and where URL scanner field is located */
+
 .scanner {
   background-color:#343434;
 }
@@ -68,42 +78,30 @@ p {
 .member-plans {margin-top: 19px;}
 
 /* color of bottom div membership page */
+
 .membership-section {
   background-color:#343434;
   margin: 0;
 }
 
-/* img of kraken on membership page */
+/* color of  div membership page */
+
+.user-section {
+  background-color:#343434;
+  margin: 0;
+}
+/* img of kraken on membership, user page, and report page*/
+
 .kraken-img {
   padding-top: 13px;
   padding-bottom: 5px;
 }
-/* css on user page */
 
 /* url input on user page */
 .scanner-input {
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
-/* screenshot image */
-
-.user-screenshot img {
-  max-height: 300px;
-  max-width: 300px;
-  padding-top: 10px;
-}
-
-.user-screenshot p {
-  color: black;
-}
-
-/* user stats */
-
-.user-stats p {
-  color: black;
-}
-
-.stats-box {
-  box-shadow: 5px 5px 5px 5px;
-  max-width: 300px;
+.user-section h1 {
+  color: #5B9A3F;
 }
