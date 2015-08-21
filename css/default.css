@@ -127,3 +127,10 @@ p {
 .user-background {
   background-color:#343434;
   margin: 0;
+}
+
+/* report page word: successful */
+span {
+  color: #5B9A3F;
+  font-weight: bold;
+}
