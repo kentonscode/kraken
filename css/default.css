@@ -13,7 +13,7 @@ h3 {
 }
 .navbar {
   background-color:#343434;
-  margin: 0;
+  margin: 0%;
 }
   /* nav hover color */
 
@@ -101,10 +101,12 @@ p {
 
 /* color of  div membership page */
 
-.user-section {
+.user-section,
+.user-background {
   background-color:#343434;
   margin: 0;
 }
+
 /* img of kraken on membership, user page, and report page*/
 
 .kraken-img {
@@ -120,3 +122,8 @@ p {
 .user-section h1 {
   color: #5B9A3F;
 }
+
+/* background color on user page */
+.user-background {
+  background-color:#343434;
+  margin: 0;
