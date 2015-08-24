@@ -165,18 +165,10 @@ span {
   margin: 0;
 }
 
-/*jumbotron on reports page*/
-
-.report-top  {
-  background-color: #343434;
-  color: #5B9A3F;
-  margin: 0;
-}
-
 /*jumbotron h1 on reports page*/
 
 .report-top h1 {
-  color: #5B9A3F;
+  color: white;
 }
 
 /*popular choice on membership page*/
