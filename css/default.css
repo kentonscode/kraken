@@ -76,6 +76,13 @@ p {
   background-color:#343434;
 }
 
+/*footer of index page*/
+
+.index-section-bottom {
+  background-color:#343434;
+  margin: 0;
+}
+
 /* why use Kraken section */
 
 .why {
@@ -144,7 +151,7 @@ p {
   margin: 0;
 }
 
-/* report page word: successful */
+/* report page word: successful and 'Threat isolated and Secured' */
 
 span {
   color: #5B9A3F;
@@ -173,7 +180,25 @@ span {
 }
 
 /*popular choice on membership page*/
+
 .popular {
   background-color: lightgray;
 
+}
+/*enabled check icon on report page*/
+
+.enabled-icon {
+  padding-bottom: 20px;
+}
+
+span.threat {
+  color: red;
+}
+
+.user-report  {
+  background-color: #417ABB
+}
+
+.user-report h1 {
+  color: white;
 }
