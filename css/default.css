@@ -98,7 +98,7 @@ p {
 
 /* color of bottom div membership page */
 
-.membership-section {
+.membership-section-bottom {
   background-color:#343434;
   margin: 0;
 }
@@ -137,4 +137,17 @@ p {
 span {
   color: #5B9A3F;
   font-weight: bold;
+}
+
+/* color of bottom div report page */
+
+.report-section-bottom {
+  background-color:#343434;
+  margin: 0;
+}
+
+.table-responsive
+{
+  padding-right: 10px !important;
+  float: none !important;
 }
