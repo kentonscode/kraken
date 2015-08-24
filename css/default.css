@@ -1,12 +1,19 @@
-/* font */
+/* font for body */
 
-body,
+body {
+  font-family:helvetica,sans-serif;
+}
+
+/*fonts for headers and buttons else*/
+
+.btn-lg,
 h1,
 h3 {
   font-family: 'Philosopher', sans-serif;
 }
 
 /* set all images to center when responsive */
+
 .img-responsive {
   margin: 0 auto;
 }
