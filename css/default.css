@@ -1,7 +1,7 @@
 /* font for body */
 
 body {
-  font-family:helvetica,sans-serif;
+  font-family: helvetica, sans-serif;
 }
 
 /*font for headers, buttons, and span tag*/
@@ -34,7 +34,7 @@ li:hover > a {
   background-color: #5B9A3F !important;
 }
 
-/* CSS relating to jumbotron  */
+/* CSS relating to jumbotron on homepage and membership page  */
 
 .jumbotron {
   background-color: #417ABB;
@@ -127,6 +127,7 @@ p {
 }
 
 /* url input on user page */
+
 .scanner-input {
   padding-top: 20px;
 }
@@ -136,12 +137,14 @@ p {
 }
 
 /* background color on user page */
+
 .user-background {
   background-color:#343434;
   margin: 0;
 }
 
 /* report page word: successful */
+
 span {
   color: #5B9A3F;
   font-weight: bold;
@@ -154,8 +157,16 @@ span {
   margin: 0;
 }
 
-.table-responsive
-{
-  padding-right: 10px !important;
-  float: none !important;
+/*jumbotron on reports page*/
+
+.report-top  {
+  background-color: #343434;
+  color: #5B9A3F;
+  margin: 0;
+}
+
+/*jumbotron h1 on reports page*/
+
+.report-top h1 {
+  color: #5B9A3F;
 }
