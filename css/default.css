@@ -6,6 +6,10 @@ h3 {
   font-family: 'Philosopher', sans-serif;
 }
 
+/* set all images to center when responsive */
+.img-responsive {
+  margin: 0 auto;
+}
 /* navigation */
 
 .nav-tabs {
