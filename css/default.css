@@ -213,3 +213,10 @@ span.threat {
 .login-input {
   padding-top: 100px;
 }
+
+/*quotes under news logo*/
+
+.news p {
+  color: black;
+
+}
