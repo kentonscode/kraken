@@ -60,7 +60,7 @@ p {
 }
 
 .btn-primary {
-  background-color: #5B9A3F;
+  background-color: #4CAF50;
   color: white;
   border-radius: 25px;
 }
@@ -199,7 +199,6 @@ span.threat {
 .remember-me {
   color: white;
 }
-
 
 /*footer for login page*/
 
