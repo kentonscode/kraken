@@ -194,3 +194,22 @@ span.threat {
 .user-report h1 {
   color: white;
 }
+
+/*Login page remember me wording*/
+.remember-me {
+  color: white;
+}
+
+
+/*footer for login page*/
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*padding for login field*/
+
+.login-input {
+  padding-top: 100px;
