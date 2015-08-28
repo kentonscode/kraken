@@ -1,10 +1,8 @@
-/* font for body */
+/* ============== Essential CSS ============== */
 
 body {
   font-family: helvetica, sans-serif;
 }
-
-/*font for headers, buttons, and span tag*/
 
 .btn-lg,
 h1,
@@ -14,28 +12,71 @@ span {
   font-family: 'Philosopher', sans-serif;
 }
 
-/* set all images to center when responsive */
+/* ============== Buttons ============== */
+
+.btn-primary {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 25px;
+}
+
+.btn-primary:hover {
+  background-color: #417ABB;
+}
+
+.scanner-button {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* ============== Image ============== */
 
 .img-responsive {
   margin: 0 auto;
 }
-/* navigation */
 
-.nav-tabs {
-  border-bottom: none;
+.kraken-img {
+  padding-top: 13px;
+  padding-bottom: 5px;
 }
-.navbar {
-  background-color:#343434;
-  margin: 0%;
-}
-  /* nav hover color */
 
-li:hover > a {
+/* ============== Index Page ============== */
+
+/* Section: Why Use On Index*/
+
+.why h1 {
+  font-size: 45px;
+}
+
+.why {
   color: white;
-  background-color: #5B9A3F !important;
+  background-color: #417ABB;
 }
 
-/* CSS relating to jumbotron on homepage and membership page  */
+/* Section: Graph and News logos On Index */
+
+.graph p {
+  color: #5B9A3F;
+}
+
+.news p {
+  color: black;
+}
+
+/*  Div colors */
+
+.index-section-bottom {
+  background-color:#343434;
+  margin: 0;
+}
+
+.scanner {
+  background-color:#343434;
+}
+
+/* ============== Jumbotron ============== */
+
+/* On index and membership page  */
 
 .jumbotron {
   background-color: #417ABB;
@@ -51,111 +92,66 @@ p {
   color: white;
 }
 
-/* buttons */
+/* ==============Login Page ============== */
 
-.scanner-button {
-  margin-bottom: 15px;
-  margin-top: 15px;
-
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.btn-primary {
-  background-color: #4CAF50;
+.login-input {
+  padding-top: 100px;
+}
+
+.remember-me {
   color: white;
-  border-radius: 25px;
 }
 
-.btn-primary:hover {
-  background-color: #417ABB;
-
-}
-
-/* color of div where homepage button is and where URL scanner field is located */
-
-.scanner {
-  background-color:#343434;
-}
-
-/*footer of index page*/
-
-.index-section-bottom {
-  background-color:#343434;
-  margin: 0;
-}
-
-/* why use Kraken section */
-
-.why {
-  color: white;
-  background-color: #417ABB;
-}
-
-.why h1 {
- font-size: 45px;
-}
-
-/* graph section */
-.graph p {
-  color: #5B9A3F;
-}
-
-/* membership price boxes */
+/* ==============Membership Page============== */
 
 .member-plans {
   margin-top: 19px;
 }
 
-/* membership container row jumbotron and row member-plans */
+.membership-section-bottom {
+  margin: 0;
+  background-color:#343434;
+}
+
+.popular {
+  background-color: lightgray;
+
+}
 
 .power {
+  margin: 0;
   background-color: #417ABB;
-  margin: 0;
 }
 
-/* color of bottom div membership page */
 
-.membership-section-bottom {
+/* ============== Navigation ============== */
+
+li:hover > a {
+  background-color: #5B9A3F !important;
+  color: white;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.navbar {
+  margin: 0;
   background-color:#343434;
-  margin: 0;
 }
 
-/* color of  div membership page */
+/* ==============Reports Page============== */
 
-.user-section,
-.user-background {
-  background-color:#343434;
-  margin: 0;
-}
+/*threats enabled icon*/
 
-/* img of kraken on membership, user page, and report page*/
-
-.kraken-img {
-  padding-top: 13px;
-  padding-bottom: 5px;
-}
-
-/* url input on user page */
-
-.scanner-input {
-  padding-top: 20px;
-}
-
-.user-section h1 {
-  color: #5B9A3F;
-}
-
-/* background color on user page */
-
-.user-background {
-  background-color:#343434;
-  margin: 0;
-}
-
-/* report page word: successful and 'Threat isolated and Secured' */
-
-span {
-  color: #5B9A3F;
-  font-weight: bold;
+.enabled-icon {
+  padding-bottom: 20px;
 }
 
 /* color of bottom div report page */
@@ -171,16 +167,11 @@ span {
   color: white;
 }
 
-/*popular choice on membership page*/
+/* Word: successful and 'Threat isolated and Secured' */
 
-.popular {
-  background-color: lightgray;
-
-}
-/*enabled check icon on report page*/
-
-.enabled-icon {
-  padding-bottom: 20px;
+span {
+  color: #5B9A3F;
+  font-weight: bold;
 }
 
 span.threat {
@@ -188,35 +179,27 @@ span.threat {
 }
 
 .user-report  {
-  background-color: #417ABB
+  background-color: #417ABB;
 }
 
 .user-report h1 {
   color: white;
 }
 
-/*Login page remember me wording*/
-.remember-me {
-  color: white;
+/* ==============User Page============== */
+
+/* url input field*/
+
+.scanner-input {
+  padding-top: 20px;
 }
 
-/*footer for login page*/
-
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.user-section h1 {
+  color: #5B9A3F;
 }
 
-/*padding for login field*/
-
-.login-input {
-  padding-top: 100px;
-}
-
-/*quotes under news logo*/
-
-.news p {
-  color: black;
-
+.user-section,
+.user-background {
+  background-color:#343434;
+  margin: 0;
 }
