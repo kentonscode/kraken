@@ -78,6 +78,11 @@ span {
 
 /* On index and membership page  */
 
+.membership-background {
+  background-color:#343434;
+  margin: 0;
+}
+
 .jumbotron {
   background-color: #417ABB;
   margin: 0;
