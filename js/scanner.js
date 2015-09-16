@@ -9,12 +9,13 @@ urlScan.get('/scan/:url', function(request, response, next) {
    );
 
   scan.stdout.on('data', function(data) {
-    fs.appendFile('message.txt', urlScan.stdout, function (err) {
-    // if (err) throw err;
+    fs.appendFile('message.txt', ' some data ', function (err) {
+    if (err) throw err;
     console.log('The "data to append" was appended to file!');
+    });
   });
-    
-  response.send()
+
+  response.send();
 });
 
 
