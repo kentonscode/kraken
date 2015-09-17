@@ -7,9 +7,8 @@ reports.get('/reports', function(request, response) {
   fs.readdir("./reports", function (err, files) {
     if (err) throw err;
     console.log(files);
+    response.send(files);
   });
-
-  response.send();
 
 });
 
