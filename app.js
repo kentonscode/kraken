@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var scannerRoute = require('./js/scanner.js');
+var reportsRoute = require('./js/reports.js');
 
 
 //middleware for scan 
@@ -17,6 +18,12 @@ app.use('/css', express.static('css'));
 
 //middleware for index
 app.use('/', express.static('./'));
+
+//middleware for index
+app.use('/', express.static('./'));
+
+//reports page
+app.use('/', reportsRoute);
 
 
 //express will listen on this port
