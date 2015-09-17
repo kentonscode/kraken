@@ -17,8 +17,6 @@ urlScan.get('/scan/:url', function(request, response, next) {
       console.log('The "data to append" was appended to file!');
     });
   });
-
-  response.send();
 });
 
 
