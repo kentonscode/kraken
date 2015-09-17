@@ -1,0 +1,22 @@
+{
+  "name": "kraken",
+  "version": "1.0.0",
+  "description": "A security vulnerability scanner for users who want an easy solution for keeping their site secure",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentonscode/kraken.git"
+  },
+  "author": "Kenton Kotsiris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kentonscode/kraken/issues"
+  },
+  "homepage": "https://github.com/kentonscode/kraken#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
