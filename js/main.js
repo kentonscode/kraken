@@ -4,7 +4,7 @@ function submitUrl(event) {
   event.preventDefault();
   console.log(formData()); //shows form inputs on client console 
   var requestScan = new XMLHttpRequest();
-  requestScan.open("GET", "/scan/:url", true);
+  requestScan.open("get", "/scan/" + document.forms[0].elements.urlInput.value, true);
   requestScan.setRequestHeader("Content-type", "application/json");
   requestScan.send(formData());
   requestScan.addEventListener('load', function(){
