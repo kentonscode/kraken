@@ -11,7 +11,7 @@ urlScan.get('/scan/:url', function(request, response, next) {
   var fileSystem = Math.floor(Math.random()*90000) + 10000;
 
   myScan.stdout.on('data', function(data) {
-    fs.appendFile(fileSystem + '-' + request.params.url + ' - report.txt', data , function (err) {
+    fs.appendFile(fileSystem + ': ' + request.params.url + ' - report.txt', data , function (err) {
       if (err) throw err;
       console.log('The "data to append" was appended to file!');
     });
