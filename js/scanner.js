@@ -12,16 +12,17 @@ urlScan.get('/scan/:url', function(request, response, next) {
   var dateScan = new Date().toDateString();
 
   myScan.stdout.on('data', function(data) {
-        if (__dirname === './reports') {
-          process.chdir('./scanner.js');
-        }
-    process.chdir('./reports'); //stores result in reports folder
-    
-    fs.appendFile(dateScan + ': ' + fileSystem + ': ' + request.params.url + ' - report.txt', data , function (err) {
-      if (err) throw err;
-      console.log('The "data to append" was appended to file!');
+    var currentDirectory = process.cwd();
+    if (currentDirectory.search('reports') == -1) {
+        process.chdir('./reports'); //stores result in reports folder
+      }
+      
+      fs.appendFile(dateScan + ': ' + fileSystem + ': ' + request.params.url + ' - report.txt', data , function (err) {
+        if (err) throw err;
+        console.log('The "data to append" was appended to file!');
+      });
     });
-  });
+  response.send();
 });
 
 
