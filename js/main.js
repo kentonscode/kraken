@@ -19,14 +19,3 @@ function formData() {
   theData.urlInput = document.forms[0].elements.urlInput.value;
   return JSON.stringify(theData);
 }
-
-// reports list
-var showReports = new XMLHttpRequest();
-showReports.open('GET', '/reports/');
-showReports.send();
-showReports.addEventListener('load', function(data){
-  var reportsText = JSON.parse(showReports.responseText);
-  for(i = 0; i < reportsText.length; i++){
-    console.log(reportsText[i]);
-  }
-});
