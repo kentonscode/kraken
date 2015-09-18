@@ -27,7 +27,7 @@ showReports.send();
 console.log(showReports);
 showReports.addEventListener('load', function(data){
   var reportsText = JSON.parse(showReports.responseText);
-  for(i = 0; i < reportsText.showReports.length; i++){
-    console.log(reportsText.showReports[i]);
+  for(i = 0; i < reportsText.length; i++){
+    console.log(reportsText[i]);
   }
 });
