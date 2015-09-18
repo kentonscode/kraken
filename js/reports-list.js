@@ -6,7 +6,9 @@ showReports.addEventListener('load', function(data){
   var reportsText = JSON.parse(showReports.responseText);
   console.log(reportsText.length)
   for(i = 0; i < reportsText.length; i++){
-    document.getElementById('reports').textContent = reportsText[i];
-    console.log(reportsText[i]);
+    var tableRow = document.createElement('tr')
+    tableRow.textContent = reportsText[i];
+    document.getElementById('reports').appendChild(tableRow);
+
   }
 });
