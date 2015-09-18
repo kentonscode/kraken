@@ -22,9 +22,12 @@ function formData() {
 
 // reports list
 var showReports = new XMLHttpRequest();
-showReports.open('GET', '/reports/')
+showReports.open('GET', '/reports/');
 showReports.send();
+console.log(showReports);
 showReports.addEventListener('load', function(data){
-
-
+  var reportsText = JSON.parse(showReports.responseText);
+  for(i = 0; i < reportsText.showReports.length; i++){
+    console.log(reportsText.showReports[i]);
+  }
 });
