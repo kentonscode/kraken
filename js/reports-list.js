@@ -1,6 +1,6 @@
 // reports list
 var showReports = new XMLHttpRequest();
-showReports.open('GET', '/reports/');
+showReports.open('GET', '/report/list/');
 showReports.send();
 showReports.addEventListener('load', function(data){
   var reportsText = JSON.parse(showReports.responseText);

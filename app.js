@@ -22,8 +22,8 @@ app.use('/', express.static('./'));
 //middleware for index
 app.use('/', express.static('./'));
 
-//reports page
-app.use('/', reportsRoute);
+//report list page
+app.use('/report', reportsRoute);
 
 
 //express will listen on this port
