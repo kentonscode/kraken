@@ -4,11 +4,17 @@ showReports.open('GET', '/report/list/');
 showReports.send();
 showReports.addEventListener('load', function(data){
   var reportsText = JSON.parse(showReports.responseText);
-  console.log(reportsText.length)
-  for(i = 0; i < reportsText.length; i++){
-    var tableRow = document.createElement('tr')
-    tableRow.textContent = reportsText[i];
-    document.getElementById('reports').appendChild(tableRow);
+  var splitReports = reportsText.toString().split(':');
+  console.log(splitReports.length)
+  
+  for (var tr = 0; tr <= 2; tr++) {
+    var tableRows = document.createElement('tr');
+    document.getElementById('reports').appendChild(tableRows)
 
+  for(i = 0; i < splitReports.length; i++){
+    var tableDate = document.createElement('td');
+    tableDate.textContent = splitReports[i];
+    document.getElementsByTagName('tr')[tr].appendChild(tableDate);
   }
+}
 });
