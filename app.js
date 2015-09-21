@@ -19,9 +19,6 @@ app.use('/css', express.static('css'));
 //middleware for index
 app.use('/', express.static('./'));
 
-//middleware for index
-app.use('/', express.static('./'));
-
 //report list page
 app.use('/report', reportsRoute);
 
