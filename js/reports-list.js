@@ -13,7 +13,7 @@ showReports.addEventListener('load', function(data){
     if(detail == 1) {
      var link = document.createElement('a');
      link.setAttribute('href', 'http://localhost:1337/report/' + row[detail].trim());
-     link.textContent = 'report';
+     link.textContent = 'view report';
      reportItem.appendChild(link);
    } else {
     itemDetail.textContent = row[detail];
