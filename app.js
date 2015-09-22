@@ -5,7 +5,7 @@ var reportsRoute = require('./js/reports.js');
 
 
 //middleware for scan 
-app.use('/', scannerRoute);
+app.use('/scan', scannerRoute);
 
 //middleware for /report
 app.use('/report', reportsRoute);

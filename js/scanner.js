@@ -2,7 +2,7 @@ var express = require('express');
 var urlScan = express.Router(); 
 var fs = require('fs');
 
-urlScan.get('/scan/:url', function(request, response, next) {
+urlScan.get('/:url', function(request, response, next) {
   var scan = require('child_process').spawn;
   var myScan = scan('ruby', ['wpscan.rb', '--url', request.params.url],
    {cwd: '/Users/Kentonkotsiris/wpscan/'}
