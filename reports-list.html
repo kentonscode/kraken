@@ -8,14 +8,46 @@
   <link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/default.css">
 </head>
-<body>
-  <div class="container">
-      <div class="row text-center">
-        <h1> Reports Page</h1>
-        <table id='reports' class="table table-responsive">
-        </table>
+<body class='reports-list-background'>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="navbar">
+        <div class="col-md-12">
+          <ul class="nav-tabs nav">
+            <li role="presentation"><a href="index.html">logout</a></li>
+          </ul>
+        </div>
       </div>
-    </div>  
+    </div>
+  </div>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>User Reports List</h1>
+    </div>
+  </div>
+  <div class='wrap'>
+    <div class="container">
+      <div class='row col-md-6 text-center'>
+        <div class="reports-list text-center">
+          <h1>The Kraken's Findings</h1>
+          <table id='reports' class="table table-responsive">
+          </table>
+        </div>
+      </div>
+      <!--div for reports -->
+      <div id='individual-report'>
+        <p>The report will display here</p>
+      </div>
+    </div> 
+    <!--footer -->
+    <div class="row reports-list-bottom">
+      <div class="col-md-12 text-center">
+        <div class="reports-list-kraken-img">
+          <img src="img/kraken-icon.png" alt="kraken">
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/reports-list.js"></script>
 </body>
 </html>
