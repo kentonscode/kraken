@@ -208,3 +208,20 @@ span.threat {
   background-color:#343434;
   margin: 0;
 }
+
+
+/* ==============Reports List Page============== */
+
+.reports-list-bottom {
+  background-color:#343434;
+  height: auto;
+}
+
+.reports-list-background {
+  background-color: whitesmoke;
+}
+
+#individual-report p {
+  color:black;
+  text-align: center;
+}
