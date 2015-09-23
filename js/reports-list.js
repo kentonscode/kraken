@@ -31,22 +31,23 @@ showReports.addEventListener('load', function(data){
 
 function showReport(event) {
   event.preventDefault();
-  var id = document.getElementsByTagName('a')[3].getAttribute('href').split('/').pop()
+  var id = event.target.getAttribute('href').split('/').pop();
   var report = new XMLHttpRequest();
   report.open('GET', '/report/print/' + id , true);
   report.send();
   report.addEventListener('load', function() {
-     console.log(report.responseText)
-  });
+   var displayReport = document.getElementById('individual-report');
+   displayReport.textContent = report.responseText;
+ });
 }
 
 function addListeners() {
- var reportLinks = document.getElementsByTagName('a')
+ var reportLinks = document.getElementsByTagName('a');
 
  for (var i = 0; i < reportLinks.length; i++) {
    reportLinks[i].addEventListener('click', function(e) {
      e.preventDefault();
      showReport(e);
    }, false);
-  }
+ }
 }
