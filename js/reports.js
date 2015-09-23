@@ -14,11 +14,12 @@ reports.get('/list', function(request, response) {
 
 reports.get('/print/:id', function(request, response){
  var id = request.params.id;
- fs.readdir(__dirname + '/../reports', function(err, files) {
+ var REPORT_PATH = __dirname + '/../reports/'
+ 
+ fs.readdir(REPORT_PATH, function(err, files) {
    for (var i = 0; i < files.length; i++) {
-     console.log(files[i].indexOf(id));
      if (files[i].indexOf(id) > -1) {
-       var report = fs.readFileSync(__dirname + "/../reports/" + files[i], "utf8");
+       var report = fs.readFileSync(REPORT_PATH + files[i], 'utf8');
        response.send(report);
      }
    }
@@ -26,4 +27,3 @@ reports.get('/print/:id', function(request, response){
 });
 
  module.exports = reports;
-
