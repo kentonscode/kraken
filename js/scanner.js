@@ -4,7 +4,7 @@ var fs = require('fs');
 
 urlScan.get('/:url', function(request, response, next) {
   var scan = require('child_process').spawn;
-  var myScan = scan('ruby', ['wpscan.rb', '--batch', '--url', request.params.url],
+  var myScan = scan('ruby', ['wpscan.rb', '--batch', '--no-color', '--no-banner', '--url', request.params.url],
    {cwd: '/Users/Kentonkotsiris/wpscan/'}
    );
 
