@@ -8,20 +8,26 @@ urlScan.get('/:url', function(request, response, next) {
    {cwd: '/Users/Kentonkotsiris/wpscan/'}
    );
 
+  console.log('I got this far 1')
+
   var fileSystem = Math.floor(Math.random()*90000) + 10000;
   var dateScan = new Date().toDateString();
 
-  myScan.stdout.on('data', function(data) {
-    var currentDirectory = process.cwd();
-    if (currentDirectory.search('reports') == -1) {
-        process.chdir('./reports'); //stores result in reports folder
-      }
-      
-      fs.appendFile(dateScan + ': ' + fileSystem + ': ' + request.params.url + ' - report.txt', data , function (err) {
-        if (err) throw err;
-        console.log('The "data to append" was appended to file!');
-      });
+  console.log('I got this far 2 ')
+
+  myScan.stdout.on('data', function(data)  {
+
+    console.log('I got this far 3')
+    // var currentDirectory = process.cwd();
+    // if (currentDirectory.search('reports') == -1) {
+    //     process.chdir('./reports'); //stores result in reports folder
+    //   }
+
+    fs.appendFile(dateScan + ': ' + fileSystem + ': ' + request.params.url + ' - report.txt', data , function (err) {
+      if (err) throw err;
+      console.log('The "data to append" was appended to file!');
     });
+  });
   response.send();
 });
 
