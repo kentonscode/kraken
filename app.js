@@ -14,7 +14,6 @@ app.use('/report', reportsRoute);
 app.use('/reports-list', reportsListRoute);
 app.use('/login', loginRoute);
 
-
 app.use('/', express.static('./'));
 app.use('/img', express.static('img'));
 app.use('/css', express.static('css'));
