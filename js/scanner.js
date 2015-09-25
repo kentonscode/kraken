@@ -14,13 +14,14 @@ urlScan.get('/:url', function(request, response, next) {
   myScan.stdout.on('data', function(data)  {
     var currentDirectory = process.cwd();
     if (currentDirectory.search('reports') == -1) {
-        process.chdir('./reports'); //stores result in reports folder
-      }
-      fs.appendFile(dateScan + ': ' + fileSystem + ': ' + request.params.url, data , function (err) {
-        if (err) throw err;
-        console.log('new report scan file created!');
-      });
+      process.chdir('./reports');
+    }
+
+    fs.appendFile(dateScan + ': ' + fileSystem + ': ' + request.params.url, data , function (err) {
+      if (err) throw err;
+      console.log('new report scan file created!');
     });
+  });
   response.send();
 });
 
