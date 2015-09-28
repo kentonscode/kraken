@@ -45,9 +45,9 @@ function addListeners() {
  var reportLinks = document.getElementsByTagName('a');
 
  for (var i = 0; i < reportLinks.length; i++) {
-   reportLinks[i].addEventListener('click', function(e) {
-     e.preventDefault();
-     showReport(e);
+   reportLinks[i].addEventListener('click', function(event) {
+     event.preventDefault();
+     showReport(event);
    }, false);
  }
 }
