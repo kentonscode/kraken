@@ -27,6 +27,17 @@ showReports.addEventListener('load', function(data){
  addListeners();
 });
 
+function addListeners() {
+ var reportLinks = document.getElementsByTagName('a');
+
+ for (var i = 0; i < reportLinks.length; i++) {
+   reportLinks[i].addEventListener('click', function(event) {
+     event.preventDefault();
+     showReport(event);
+   }, false);
+ }
+}
+
 //show single report
 
 function showReport(event) {
@@ -39,15 +50,4 @@ function showReport(event) {
    var displayReport = document.getElementById('individual-report');
    displayReport.textContent = report.responseText;
  });
-}
-
-function addListeners() {
- var reportLinks = document.getElementsByTagName('a');
-
- for (var i = 0; i < reportLinks.length; i++) {
-   reportLinks[i].addEventListener('click', function(event) {
-     event.preventDefault();
-     showReport(event);
-   }, false);
- }
 }
