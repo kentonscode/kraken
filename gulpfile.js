@@ -15,5 +15,18 @@ gulp.task('watch', function() {
   });
 });
 
+//nodemon task
+gulp.task('nodemon', function() {
+  nodemon({
+    script: 'app.js',
+    ext: 'js'
+  })
+    .on('start', ['watch'])
+    .on('change', ['watch'])
+    .on('restart', function() {
+      console.log('Restarted!');
+    });
+});
+
 //run by just typing gulp
-gulp.task('default', ['test', 'watch']);
+gulp.task('default', ['test', 'watch', 'nodemon']);
