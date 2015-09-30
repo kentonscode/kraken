@@ -10,9 +10,7 @@ gulp.task('test', function() {
 
 //watch
 gulp.task('watch', function() {
-  gulp.watch('app.js', function() {
-    console.log('change occurred');
-  });
+  gulp.watch('app.js', ['test'])
 });
 
 //nodemon task
@@ -28,5 +26,5 @@ gulp.task('nodemon', function() {
     });
 });
 
-//run by just typing gulp
+//run following when typing gulp
 gulp.task('default', ['test', 'watch', 'nodemon']);
