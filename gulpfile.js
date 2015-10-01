@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var mocha = require('gulp-mocha');
+var uglify = require('gulp-uglify');
 
 //test
 gulp.task('test', function() {
@@ -11,6 +12,13 @@ gulp.task('test', function() {
 //watch
 gulp.task('watch', function() {
   gulp.watch('app.js', ['test'])
+});
+
+//task for uglify
+gulp.task('compress', function() {
+  return gulp.src('./js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./public/dist'));
 });
 
 //nodemon task
@@ -27,4 +35,4 @@ gulp.task('nodemon', function() {
 });
 
 //run following when typing gulp
-gulp.task('default', ['test', 'watch', 'nodemon']);
+gulp.task('default', ['test', 'watch', 'compress']);

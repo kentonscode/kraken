@@ -1,11 +1,11 @@
 var express = require('express');
 var app = express();
-var loginRoute = require('./js/login-route.js');
-var membershipRoute = require('./js/membership-route.js');
-var reportsRoute = require('./js/reports.js');
-var reportsListRoute = require('./js/reports-route.js');
+var loginRoute = require('./server/login-route.js');
+var membershipRoute = require('./server/membership-route.js');
+var reportsRoute = require('./server/reports.js');
+var reportsListRoute = require('./server/reports-route.js');
 var scannerRoute = require('./js/scanner.js');
-var userPageRoute = require('./js/user-page-route.js');
+var userPageRoute = require('./server/user-page-route.js');
 
 app.use('/login', loginRoute);
 app.use('/membership', membershipRoute);
