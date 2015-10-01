@@ -3,7 +3,7 @@ var reportsListRoute = express.Router();
 var path = require('path');
 
 reportsListRoute.get('/', function(request, response) {
-  response.sendFile(path.join(__dirname + '/../reports-list.html'));
+  response.sendFile(path.join(__dirname + '/../public/dist/reports-list.html'));
 });
 
 

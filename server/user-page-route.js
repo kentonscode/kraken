@@ -3,7 +3,7 @@ var userPageRoute = express.Router();
 var path = require('path');
 
 userPageRoute.get('/', function(request, response) {
-  response.sendFile(path.join(__dirname + '/../user-page.html'));
+  response.sendFile(path.join(__dirname + '/../public/dist/user-page.html'));
 });
 
 
