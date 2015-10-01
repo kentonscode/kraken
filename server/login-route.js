@@ -3,7 +3,7 @@ var loginRoute = express.Router();
 var path = require('path');
 
 loginRoute.get('/', function(request, response) {
-  response.sendFile(path.join(__dirname + '/../public/dist/login.html'));
+  response.sendFile(path.join(__dirname + '/../public/dist/html/login.html'));
 });
 
 
