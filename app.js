@@ -14,9 +14,9 @@ app.use('/reports-list', reportsListRoute);
 app.use('/scan', scannerRoute);
 app.use('/user-page', userPageRoute);
 
-app.use('/', express.static('./'));
-app.use('/img', express.static('img'));
-app.use('/css', express.static('css'));
-app.use(express.static('js'));
+app.use('/', express.static('./public/dist/html'));
+app.use('/img', express.static('public/dist/img'));
+app.use('/css', express.static('public/dist/css'));
+app.use('/js', express.static('public/dist/js'));
 
 app.listen(1337);

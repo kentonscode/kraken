@@ -4,6 +4,8 @@ var mocha = require('gulp-mocha');
 var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
 var minifyCss = require('gulp-minify-css');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 
 //test
@@ -21,7 +23,7 @@ gulp.task('watch', function() {
 gulp.task('compress', function() {
   return gulp.src('./js/*.js')
   .pipe(uglify())
-  .pipe(gulp.dest('./public/dist'));
+  .pipe(gulp.dest('./public/dist/js'));
 });
 
 //task for html
@@ -30,18 +32,31 @@ gulp.task('minify-html', function() {
     conditionals: true,
     spare:true
   };
-  
+
   return gulp.src('./*.html')
   .pipe(minifyHTML(opts))
-  .pipe(gulp.dest('./public/dist/'));
+  .pipe(gulp.dest('./public/dist/html'));
 });
 
 //task for css
 gulp.task('minify-css', function() {
   return gulp.src('./css/*.css')
   .pipe(minifyCss({compatibility: 'ie8'}))
-  .pipe(gulp.dest('./public/dist/'));
+  .pipe(gulp.dest('./public/dist/css'));
 });
+
+
+//task for images 
+gulp.task('optimize-img', function () {
+    return gulp.src('./img/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('./public/dist/img'));
+});
+
 
 //nodemon task
 gulp.task('nodemon', function() {
@@ -57,4 +72,4 @@ gulp.task('nodemon', function() {
 });
 
 //run following when typing gulp
-gulp.task('default', ['test', 'watch', 'compress', 'minify-html', 'minify-css']);
+gulp.task('default', ['test', 'watch', 'compress', 'minify-html', 'minify-css', 'optimize-img']);
