@@ -1,7 +1,0 @@
-                       _                 
-        /\ /\_ __ __  | | _____ _ __     
-       / /_/  __ / _` | |/ / _ \ '_  \   
-      / __ \| | | (_| |   <  __/ | | |   
-      \/  \/|_|  \__,_|_|\_\___|_| |_|   
-
-[!] The remote website is up, but does not seem to be running WordPress.
