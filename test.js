@@ -1,7 +1,7 @@
 var request = require('supertest');
 var should = require('should');
 var express = require('express');
-var reportsListRoute = require('./js/reports-route.js');
+var reportsListRoute = require('./server/reports-route.js');
 
 describe('Express Backend Route Tests', function() {
   var app = express();
