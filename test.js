@@ -16,4 +16,12 @@ describe('Express Backend Route Tests', function() {
     .end(done);
   });
 
+  app.use('/reports', reportsListRoute);
+
+  it('status code 200', function(done) {
+    agent
+    .get('/reports')
+    .expect(200)
+    .end(done);
+  });
 });
