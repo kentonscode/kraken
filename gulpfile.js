@@ -56,10 +56,9 @@ gulp.task('optimize-img', function () {
 //browsersync
 gulp.task('browser-sync', function() {
   browserSync.init({
-    server: {
-      baseDir: "./"
-    }
+    proxy: "localhost:1337"
   });
+  
   gulp.watch('./*.html', ['minify-html']).on("change", browserSync.reload);
 });
 
@@ -68,7 +67,7 @@ gulp.task('nodemon', function() {
   nodemon({
     script: 'app.js',
   })
-  .on('start', ['test'])
+  .on('start', ['test']);
 });
 
 //run following when typing gulp
