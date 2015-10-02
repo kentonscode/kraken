@@ -1,13 +1,8 @@
 var request = require('supertest');
 var should = require('should');
-var express = require('express');
-var reportsListRoute = require('./server/reports-route.js');
+var agent =  require('supertest')('http://localhost:1337')
 
 describe('Express Backend Route Tests', function() {
-  var app = express();
-
-  app.use('/reports-list', reportsListRoute);
-  var agent = request.agent(app);
 
   it('status code 200', function(done) {
     agent
@@ -16,11 +11,9 @@ describe('Express Backend Route Tests', function() {
     .end(done);
   });
 
-  app.use('/reports', reportsListRoute);
-
   it('status code 200', function(done) {
     agent
-    .get('/reports')
+    .get('/report/list')
     .expect(200)
     .end(done);
   });

@@ -15,11 +15,6 @@ gulp.task('test', function() {
   .pipe(mocha({reporter: 'landing'}));
 });
 
-//watch
-gulp.task('watch', function() {
-  gulp.watch('app.js', ['test']);
-});
-
 //task for uglify
 gulp.task('compress', function() {
   return gulp.src('./js/*.js')
@@ -72,14 +67,9 @@ gulp.task('browser-sync', function() {
 gulp.task('nodemon', function() {
   nodemon({
     script: 'app.js',
-    ext: 'js'
   })
-  .on('start', ['watch'])
-  .on('change', ['watch'])
-  .on('restart', function() {
-    console.log('Restarted!');
-  });
+  .on('start', ['test'])
 });
 
 //run following when typing gulp
-gulp.task('default', ['test', 'watch', 'compress', 'minify-html', 'minify-css', 'optimize-img', 'browser-sync']);
+gulp.task('default', ['nodemon', 'compress', 'minify-html', 'minify-css', 'optimize-img', 'browser-sync']);
