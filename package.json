@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kentonscode/kraken#readme",
   "dependencies": {
+    "browser-sync": "^2.9.8",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
     "gulp-imagemin": "^2.3.0",
