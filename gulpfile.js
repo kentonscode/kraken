@@ -60,7 +60,7 @@ gulp.task('browser-sync', function() {
       baseDir: "./"
     }
   });
-  gulp.watch('./*.html', ['test', 'minify-html']).on("change", browserSync.reload);
+  gulp.watch('./*.html', ['minify-html']).on("change", browserSync.reload);
 });
 
 //nodemon task
