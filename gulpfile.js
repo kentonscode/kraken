@@ -6,6 +6,7 @@ var minifyHTML = require('gulp-minify-html');
 var minifyCss = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var browserSync = require('browser-sync').create();
 
 
 //test
@@ -16,7 +17,7 @@ gulp.task('test', function() {
 
 //watch
 gulp.task('watch', function() {
-  gulp.watch('app.js', ['test'])
+  gulp.watch('app.js', ['test']);
 });
 
 //task for uglify
@@ -48,15 +49,24 @@ gulp.task('minify-css', function() {
 
 //task for images 
 gulp.task('optimize-img', function () {
-    return gulp.src('./img/*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest('./public/dist/img'));
+  return gulp.src('./img/*')
+  .pipe(imagemin({
+    progressive: true,
+    svgoPlugins: [{removeViewBox: false}],
+    use: [pngquant()]
+  }))
+  .pipe(gulp.dest('./public/dist/img'));
 });
 
+//browsersync
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+  gulp.watch('./*.html', ['test', 'minify-html']).on("change", browserSync.reload);
+});
 
 //nodemon task
 gulp.task('nodemon', function() {
@@ -72,4 +82,4 @@ gulp.task('nodemon', function() {
 });
 
 //run following when typing gulp
-gulp.task('default', ['test', 'watch', 'compress', 'minify-html', 'minify-css', 'optimize-img']);
+gulp.task('default', ['test', 'watch', 'compress', 'minify-html', 'minify-css', 'optimize-img', 'browser-sync']);
